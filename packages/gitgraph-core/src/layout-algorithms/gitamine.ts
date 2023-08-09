@@ -1,11 +1,8 @@
 import { Commit } from "../commit";
-import FastPriorityQueue from "fastpriorityqueue";
 
 import { DefaultRendering } from "./default";
 
-export { CompactRendering };
-
-class GitamineRendering<TNode> extends DefaultRendering<TNode> {
+export class GitamineRendering<TNode> extends DefaultRendering<TNode> {
   protected computePositions(commits: Array<Commit<TNode>>): void {
     commits.forEach((commit, i) => {
       // TODO
